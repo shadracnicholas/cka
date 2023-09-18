@@ -1,10 +1,10 @@
-# Certified Kubernates Administrator Notes
+# Certified Kubernates Administrator (CKA) Notes
 
 ## Prerequisite
 
-Docker - <https://docs.docker.com/get-docker/>
-kubectl - <https://kubernetes.io/docs/tasks/tools/>
-kind cluster with 3 nodes - Run `make create_cluster` - <https://kind.sigs.k8s.io/>
+1. Docker - <https://docs.docker.com/get-docker/>
+2. kubectl - <https://kubernetes.io/docs/tasks/tools/>
+3. kind cluster with 3 nodes - Run `make create_cluster` - <https://kind.sigs.k8s.io/>
 
 ## Architectural Overview
 
@@ -33,5 +33,7 @@ kube-proxy - network proxy for networking between nodes
 ### Using namespaces
 
 Its important to note that most commands you might need to specify the namespace. If not specified, the `default` namespace will be used.
-To get all namespaces `kubectl get namespaces`
-Example - Getting pods from a specific namespace - `kubectl get pods -n kube-system`
+To get all namespaces - `kubectl get namespaces`
+To create a namespace - `kubectl create namespace test`
+To delete a namespace - `kubectl delete namespaces test`
+Example - Getting pods from a specific namespace - `kubectl get pods -n kube-system` or for all pods `kubectl get pods --all-namespaces`
