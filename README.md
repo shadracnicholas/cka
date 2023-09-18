@@ -4,7 +4,7 @@
 
 Docker - <https://docs.docker.com/get-docker/>
 kubectl - <https://kubernetes.io/docs/tasks/tools/>
-kind cluster with 3 nodes `make create_cluster` - <https://kind.sigs.k8s.io/>
+kind cluster with 3 nodes - Run `make create_cluster` - <https://kind.sigs.k8s.io/>
 
 ## Architectural Overview
 
@@ -29,3 +29,9 @@ The machines where the containers managed by the clusters run.
 kubelet - k8s agent that runs on each node. Comunicates with control plane and ensures containers run as intructed. Also handles container status.
 container runtime - container software used to run your container. Not included in k8s.
 kube-proxy - network proxy for networking between nodes
+
+### Using namespaces
+
+Its important to note that most commands you might need to specify the namespace. If not specified, the `default` namespace will be used.
+To get all namespaces `kubectl get namespaces`
+Example - Getting pods from a specific namespace - `kubectl get pods -n kube-system`
