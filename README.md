@@ -1,6 +1,10 @@
 # Certified Kubernates Administrator Notes
 
-k8s Version - 1.27
+## Prerequisite
+
+Docker - <https://docs.docker.com/get-docker/>
+kubectl - <https://kubernetes.io/docs/tasks/tools/>
+kind cluster with 3 nodes `make create_cluster` - <https://kind.sigs.k8s.io/>
 
 ## Architectural Overview
 
