@@ -4,13 +4,13 @@
 
 1. Docker - <https://docs.docker.com/get-docker/>
 2. kubectl - <https://kubernetes.io/docs/tasks/tools/>
-3. kind cluster with 3 nodes - Run `make create_cluster` - <https://kind.sigs.k8s.io/>
+3. kind cluster with 3 nodes - Run `make create_cluster` or `make delete_cluster` - <https://kind.sigs.k8s.io/>
 
 ## Architectural Overview
 
 ### Control Plane
 
-Multiple components managing the cluster
+Consists of multiple components that manage the cluster itself.
 
 #### Control Plane Components
 
@@ -37,3 +37,9 @@ To get all namespaces - `kubectl get namespaces`
 To create a namespace - `kubectl create namespace test`
 To delete a namespace - `kubectl delete namespaces test`
 Example - Getting pods from a specific namespace - `kubectl get pods -n kube-system` or for all pods `kubectl get pods --all-namespaces`
+
+## Examination Areas
+
+I have arranged these in the different folders. Reccomended order is;
+
+1. Cluster Management - high availability, management tools, draining nodes, upgrading k8s with kubeadm, backup and restore etcd
